@@ -18,10 +18,6 @@ To run each case, follow these steps:
     ```bash
     pip install -r requirements.txt
 
-
-
-
-
 2. **Generate data**
    Stand in directory `data/time_marching_swhd1D_DG-scaled-hbnoise` by running:
 
