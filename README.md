@@ -12,19 +12,13 @@ To run each case, follow these steps:
 
 1. **Install `pySPEC`**
 
-   This project depends on the [`pySPEC`](https://github.com/PatricioClark/pySPEC) library.
+   This project depends on the [`pySPEC`](https://github.com/PatricioClark/pySPEC) library, and other python packages.
 
-   To install it directly from GitHub, run:
-
+   run:
     ```bash
-    pip install git+https://github.com/PatricioClark/pySPEC.git@adjoint-merge
-
-  or alternatively:
+    pip install -r requirements.txt
 
 
-    git clone https://github.com/PatricioClark/pySPEC.git
-    cd pySPEC
-    pip install -e .
 
 
 
