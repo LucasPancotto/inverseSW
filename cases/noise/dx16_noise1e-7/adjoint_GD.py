@@ -257,6 +257,10 @@ for iit in range(fpm.iit0 + 1, fpm.iitN):
                         true_u,
                         out_h,
                         true_h,
+                        uu0,
+                        true_uu0,
+                        hh0,
+                        true_hh0,
                         noise_u,
                         noise_h)
         else: # if measurements without noise
