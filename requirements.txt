@@ -3,6 +3,4 @@ matplotlib
 numpy==2.3.3
 optax==0.2.6
 scipy==1.16.2
-seaborn
-# Install pySPEC directly from GitHub
 git+https://github.com/PatricioClark/pySPEC.git@adjoint-merge

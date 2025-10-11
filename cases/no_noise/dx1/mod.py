@@ -10,11 +10,7 @@ from types import SimpleNamespace
 import pySPEC as ps
 from pySPEC.solvers.swhd_1d import SWHD_1D
 from pySPEC.solvers.adjoint_swhd_1d import Adjoint_SWHD_1D
-import seaborn as sns
 
-sns.set_style("white")
-# palette = sns.color_palette("mako", as_cmap=True)
-sns.set_palette(palette='Dark2')
 
 def check_dir(directory):
     # Check if the directory exists
