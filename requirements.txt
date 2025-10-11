@@ -2,7 +2,7 @@ jax==0.4.35
 matplotlib==3.5.3
 numpy==2.3.3
 optax==0.2.6
-pySPEC==0.2-r213
-pySPEC.egg==info
 scipy==1.16.2
 seaborn==0.11.2
+# Install pySPEC directly from GitHub
+git+https://github.com/PatricioClark/pySPEC.git@adjoint-merge
