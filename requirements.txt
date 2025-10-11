@@ -1,5 +1,5 @@
 jax
-matplotlib==3.5.3
+matplotlib
 numpy==2.3.3
 optax==0.2.6
 scipy==1.16.2
