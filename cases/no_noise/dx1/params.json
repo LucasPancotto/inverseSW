@@ -41,5 +41,5 @@
     "u0_path": "./u0s",
     "h0_path": "./h0s",
     "field_path": "./forward_swhd/outs",
-    "data_path": "../../data/time_marching_swhd1D_DG-scaled-hbnoise/outs"
+    "data_path": "../../../data/time_marching_swhd1D_DG-scaled-hbnoise/outs"
   }
