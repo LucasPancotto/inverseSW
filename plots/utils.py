@@ -99,12 +99,12 @@ class Getfiles():
         if adjointpath is not None:
             self.adjointpath = adjointpath
             if self.noise:
-                self.pinn_path = f'/home/lpancotto/code/tesis/pinns/1d_tests/adjoint-comparation/sparse_h/perc_tests/collocation/noise/nx{self.nx}/nx{self.nx}_GN{self.std_noise}/'
+                self.pinn_path = f'../pinnSW/cases/noise/nx{self.nx}/nx{self.nx}_GN{self.std_noise}/'
             else:
-                self.pinn_path = f'/home/lpancotto/code/tesis/pinns/1d_tests/adjoint-comparation/sparse_h/perc_tests/collocation/no_noise/nx{self.nx}/'
+                self.pinn_path = f'../pinnSW/cases/no_noise/nx{self.nx}/'
             # self.pinn_path = pinn_path
 
-            self.data_path = '/home/lpancotto/code/tesis/adjoint/data/pinky_data/time_marching_swhd1D_DG-scaled-hbnoise/outs'
+            self.data_path = '../adjointSW/data/time_marching_swhd1D_DG-scaled-hbnoise/outs'
             self.hb_path = f'{self.adjointpath}/hbs'
             if self.inverse_u0:
                 self.u0_path = f'{self.adjointpath}/u0s'
@@ -112,17 +112,17 @@ class Getfiles():
                 self.h0_path = f'{self.adjointpath}/h0s'
 
         elif self.noise:
-            self.pinn_path = f'/home/lpancotto/code/tesis/pinns/1d_tests/adjoint-comparation/sparse_h/perc_tests/collocation/noise/nx{self.nx}/nx{self.nx}_GN{self.std_noise}/'
-            self.adjointpath = f'/home/lpancotto/code/tesis/adjoint/results/noise/'
+            self.pinn_path = f'../pinnSW/cases/noise/nx{self.nx}/nx{self.nx}_GN{self.std_noise}/'
+            self.adjointpath = f'../adjointSW/cases/noise/'
 
             self.hb_path = f'{self.adjointpath}adjoint_lbfgs_sx{self.nx}_st250-{self.std_noise}/hbs'
-            self.data_path = '/home/lpancotto/code/tesis/adjoint/data/pinky_data/time_marching_swhd1D_DG-scaled-hbnoise/outs'
+            self.data_path = '../adjointSW/data/time_marching_swhd1D_DG-scaled-hbnoise/outs'
         else:
-            self.pinn_path = f'/home/lpancotto/code/tesis/pinns/1d_tests/adjoint-comparation/sparse_h/perc_tests/collocation/no_noise/nx{self.nx}/'
-            self.adjointpath = f'/home/lpancotto/code/tesis/adjoint/results/no_noise/'
+            self.pinn_path = f'../pinnSW/cases/no_noise/nx{self.nx}/'
+            self.adjointpath = f'../adjointSW/cases/no_noise/'
 
             self.hb_path = f'{self.adjointpath}adjoint_lbfgs_sx{self.nx}_st250/hbs'
-            self.data_path = '/home/lpancotto/code/tesis/adjoint/data/pinky_data/time_marching_swhd1D_DG-scaled-hbnoise/outs'
+            self.data_path = '../adjointSW/data/time_marching_swhd1D_DG-scaled-hbnoise/outs'
 
         if figure_path is None:
             self.figure_path = self.adjointpath+'figures'
