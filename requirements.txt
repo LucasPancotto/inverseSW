@@ -1,6 +1,6 @@
 jax
 matplotlib
-numpy==2.3.3
+numpy
 optax==0.2.6
 scipy==1.16.2
 tensorflow==2.10.0
