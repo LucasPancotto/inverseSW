@@ -1,8 +1,10 @@
-The code to generate data points in `data/time_marching_swhd1D_DG-scaled-hbnoise`, which are used in all cases in `cases/`.
+Directory `adjointSW` contains code for Adjoint State method cases, and directory `pinnSW` contains code for PINN cases. Both directories work independently.
 
-The directory `cases/` contains:
-- A `no_noise/` folder, which includes several subdirectories named `dx*`, where each number indicates how sparse the data points are (in number of simulation steps `dx` between data points).
-- A `noise/` folder, which contains cases with different amplitudes of added noise to the data points.
+For each method, the code to generate data points is contained in `adjointSW/data/time_marching_swhd1D_DG-scaled-hbnoise` and `pinnSW/data/time_marching_swhd1D_DG-scaled-hbnoise_pinn` respectively. The cases for each method are contained in  `adjointSW/cases` and `pinnSW/cases`, respectively.
+
+Each directory `cases/` contains:
+- A `no_noise/` folder, that contains several subdirectories which are cases with different sparsity of data points (in number of simulation steps `dx` between data points).
+- A `noise/` folder, that contains cases with different amplitudes of added noise to the data points.
 
 ---
 
@@ -20,15 +22,23 @@ To run each case, follow these steps:
 
 2. **Generate data**
 
-   Stand in directory `data/time_marching_swhd1D_DG-scaled-hbnoise` by running:
+   Go to directory `data/time_marching_swhd1D_DG-scaled-hbnoise` (or `data/time_marching_swhd1D_DG-scaled-hbnoise_pinn` if running PINN case).
 
-   ```bash
-   cd ./data/time_marching_swhd1D_DG-scaled-hbnoise.
+   Create directory named `outs`.
 
    Run `time_marching.py`.
 
 3. **Run a case**
 
-   stand in directory `cases/` + path to particular case.
+  a. **Run adjoint case**
 
-   Once there, run `adjoint_GD.py`.
+  Go to a particular case directory in `adjointSW/cases`(for example `adjointSW/cases/no_noise/dx1`).
+
+  Run `adjoint_GD.py`.
+
+  b. **Run PINN case**
+  Go to a particular case directory in `pinnSW/cases`(for example `pinnSW/cases/no_noise/nx1`).
+
+  Create folder named `data`.
+
+  Run `run_pinn.py`.
