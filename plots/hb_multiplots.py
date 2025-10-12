@@ -30,7 +30,7 @@ multiple_runs=[False,True]
 plot_measurements = [False,True]
 
 # figure_path = 'no_noise_figures'
-figure_path = '/home/lpancotto/code/tesis/adjoint/results/inverse_hb_h0_u0/paper_figures'
+figure_path = './figures'
 
 plt.close('all')
 f1,axs1 = plt.subplots(nrows = len(Nx1), figsize=(15,10))
@@ -39,7 +39,7 @@ f1,axs1 = plt.subplots(nrows = len(Nx1), figsize=(15,10))
 f1.canvas.draw()
 
 for i,nx in enumerate(Nx1):
-    adjointpath = f'/home/lpancotto/code/tesis/adjoint/results/inverse_hb_h0_u0/dx{nx}'+f'/dx{nx}_dt1_inv_hb_h0_u0-nf_{interps[i]}'
+    adjointpath = f'../adjointSW/cases/no_noise'+f'/dx{nx}'
     gf = Getfiles(nx = nx,
                   last_iit= last_iits[i],
                   multiple_runs=multiple_runs[i],

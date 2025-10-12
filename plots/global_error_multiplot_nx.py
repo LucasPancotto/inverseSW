@@ -41,10 +41,10 @@ interps = ['gauss', 'gauss','gauss']
 last_iits = [96,81,56]
 multiple_runs=[False,False,False]
 
-figure_path = '/home/lpancotto/code/tesis/adjoint/results/inverse_hb_h0_u0/paper_figures'
+figure_path = './figures'
 
 for i,nx in enumerate(Nx1):
-    adjointpath = f'/home/lpancotto/code/tesis/adjoint/results/inverse_hb_h0_u0/dx{nx}'+f'/dx{nx}_dt1_inv_hb_h0_u0-nf_{interps[i]}'
+    adjointpath = f'../adjointSW/cases/no_noise'+f'/dx{nx}'
 
     gf = Getfiles(nx = nx,
                   last_iit= last_iits[i],

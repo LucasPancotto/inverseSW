@@ -28,7 +28,7 @@ std_figure_names=[r'$1\times 10^{-6}$']
 interps = ['gauss']
 last_iits = [49]
 
-figure_path = '/home/lpancotto/code/tesis/adjoint/results/inverse_hb_h0_u0/noise_cases/paper_figures'
+figure_path = './figures'
 
 plt.close('all')
 
@@ -40,7 +40,7 @@ f7.canvas.draw()
 
 
 for i, std_noise in enumerate(std_names):
-    adjointpath = f'/home/lpancotto/code/tesis/adjoint/results/inverse_hb_h0_u0/noise_cases/gauss_interpolation'+f'/dx{nx}_dt1_inv_hb_h0_u0-nf_{interps[i]}-noise{std_names[i]}'
+    adjointpath = f'../adjointSW/cases/noise'+f'/dx{nx}_noise{std_names[i]}'
 
 
     gf = Getfiles(nx = nx,

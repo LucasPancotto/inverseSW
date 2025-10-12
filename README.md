@@ -42,3 +42,11 @@ To run each case, follow these steps:
   Create folder named `data`.
 
   Run `run_pinn.py`.
+
+4. **Plots**
+
+  After running all cases, for both PINNs and Adjoint Method, go to directory `plots`.
+
+  Create folder named `figures`.
+
+  Run each python archive in `plots` directory to save plots of the results in `.pdf` format into `figures` directory.

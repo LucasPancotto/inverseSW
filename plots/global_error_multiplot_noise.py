@@ -28,7 +28,7 @@ std_figure_names=[r'$1\times 10^{-7}$',r'$5\times 10^{-7}$',r'$1\times 10^{-6}$'
 
 interps = ['gauss', 'gauss','gauss','gauss']
 last_iits = [62,50,49,52]
-figure_path = '/home/lpancotto/code/tesis/adjoint/results/inverse_hb_h0_u0/noise_cases/paper_figures'
+figure_path = './figures'
 
 # sweep error in different scales for different noise amplitudes
 sweep_pinn = []
@@ -48,7 +48,7 @@ Usweep_adj_mid = []
 
 
 for i, std_noise in enumerate(std_names):
-    adjointpath = f'/home/lpancotto/code/tesis/adjoint/results/inverse_hb_h0_u0/noise_cases/gauss_interpolation'+f'/dx{nx}_dt1_inv_hb_h0_u0-nf_{interps[i]}-noise{std_names[i]}'
+    adjointpath = f'../adjointSW/cases/noise'+f'/dx{nx}_noise{std_names[i]}'
     gf = Getfiles(nx = nx,
                   last_iit= last_iits[i],
                   adjointpath = adjointpath,

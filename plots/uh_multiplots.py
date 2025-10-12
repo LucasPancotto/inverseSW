@@ -33,12 +33,12 @@ interps = ['gauss', 'gauss','gauss', 'gauss']
 last_iits = [96,81,56,66]
 multiple_runs=[False,False,False,True]
 
-figure_path = '/home/lpancotto/code/tesis/adjoint/results/inverse_hb_h0_u0/paper_figures'
+figure_path = './figures'
 
 
 
 for i,nx in enumerate(Nx1):
-    adjointpath = f'/home/lpancotto/code/tesis/adjoint/results/inverse_hb_h0_u0/dx{nx}'+f'/dx{nx}_dt1_inv_hb_h0_u0-nf_{interps[i]}'
+    adjointpath = f'../adjointSW/cases/nonoise'+f'/dx{nx}'
 
     plt.close('all')
     f1,axs = plt.subplots(nrows = 2, ncols=4, figsize=(15,10))
