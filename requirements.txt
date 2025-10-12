@@ -2,7 +2,7 @@ jax
 matplotlib
 numpy
 optax==0.2.6
-scipy==1.16.2
+scipy
 tensorflow==2.10.0
 tensorflow_cpu==2.10.0
 git+https://github.com/PatricioClark/pySPEC.git@adjoint-merge
