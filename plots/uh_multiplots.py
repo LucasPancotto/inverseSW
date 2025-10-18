@@ -31,14 +31,14 @@ from utils import Getfiles
 Nx1 = [1,16,64,128]
 interps = ['gauss', 'gauss','gauss', 'gauss']
 last_iits = [96,81,56,66]
-multiple_runs=[False,False,False,True]
+multiple_runs=[False,False,False,False]
 
 figure_path = './figures'
 
 
 
 for i,nx in enumerate(Nx1):
-    adjointpath = f'../adjointSW/cases/nonoise'+f'/dx{nx}'
+    adjointpath = f'../adjointSW/cases/no_noise'+f'/dx{nx}'
 
     plt.close('all')
     f1,axs = plt.subplots(nrows = 2, ncols=4, figsize=(15,10))

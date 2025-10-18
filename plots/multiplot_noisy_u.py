@@ -33,7 +33,7 @@ for i, std_noise in enumerate(std_names):
                   adjointpath = adjointpath,
                   noise=True,
                   std_noise=std_noise,
-                  multiple_runs=True,
+                  multiple_runs=False,
                   normalized_data=True,
                   figure_path=figure_path)
     gf.get_paths()

@@ -99,9 +99,9 @@ class Getfiles():
         if adjointpath is not None:
             self.adjointpath = adjointpath
             if self.noise:
-                self.pinn_path = f'../pinnSW/cases/noise/nx{self.nx}/nx{self.nx}_GN{self.std_noise}/'
+                self.pinn_path = f'../pinnsSW/cases/noise/nx{self.nx}_GN{self.std_noise}/'
             else:
-                self.pinn_path = f'../pinnSW/cases/no_noise/nx{self.nx}/'
+                self.pinn_path = f'../pinnsSW/cases/no_noise/nx{self.nx}/'
             # self.pinn_path = pinn_path
 
             self.data_path = '../adjointSW/data/time_marching_swhd1D_DG-scaled-hbnoise/outs'
@@ -112,13 +112,13 @@ class Getfiles():
                 self.h0_path = f'{self.adjointpath}/h0s'
 
         elif self.noise:
-            self.pinn_path = f'../pinnSW/cases/noise/nx{self.nx}/nx{self.nx}_GN{self.std_noise}/'
+            self.pinn_path = f'../pinnsSW/cases/noise/nx{self.nx}_GN{self.std_noise}/'
             self.adjointpath = f'../adjointSW/cases/noise/'
 
             self.hb_path = f'{self.adjointpath}adjoint_lbfgs_sx{self.nx}_st250-{self.std_noise}/hbs'
             self.data_path = '../adjointSW/data/time_marching_swhd1D_DG-scaled-hbnoise/outs'
         else:
-            self.pinn_path = f'../pinnSW/cases/no_noise/nx{self.nx}/'
+            self.pinn_path = f'../pinnsSW/cases/no_noise/nx{self.nx}/'
             self.adjointpath = f'../adjointSW/cases/no_noise/'
 
             self.hb_path = f'{self.adjointpath}adjoint_lbfgs_sx{self.nx}_st250/hbs'

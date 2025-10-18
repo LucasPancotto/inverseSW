@@ -48,7 +48,7 @@ for i,nx in enumerate(Nx1):
 
     gf = Getfiles(nx = nx,
                   last_iit= last_iits[i],
-                  multiple_runs=multiple_runs[i],
+                  multiple_runs=False,
                   normalized_data=True,
                   adjointpath = adjointpath,
                   figure_path=figure_path)
@@ -93,7 +93,7 @@ for i,nx in enumerate(Nx1):
 Nx2 = [128]
 interps = ['gauss']
 last_iits = [66]
-multiple_runs=[True]
+multiple_runs=[False]
 
 
 for i,nx in enumerate(Nx2):
@@ -101,7 +101,7 @@ for i,nx in enumerate(Nx2):
 
     gf = Getfiles(nx = nx,
                   last_iit= last_iits[i],
-                  multiple_runs=multiple_runs[i],
+                  multiple_runs=False,
                   normalized_data=True,
                   adjointpath = adjointpath,
                   figure_path=figure_path)

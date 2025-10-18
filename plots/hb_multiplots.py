@@ -42,7 +42,7 @@ for i,nx in enumerate(Nx1):
     adjointpath = f'../adjointSW/cases/no_noise'+f'/dx{nx}'
     gf = Getfiles(nx = nx,
                   last_iit= last_iits[i],
-                  multiple_runs=multiple_runs[i],
+                  multiple_runs=False,
                   plot_measurements=plot_measurements[i],
                   normalized_data=True,
                   adjointpath = adjointpath,
