@@ -4,4 +4,4 @@ numpy<2
 optax==0.2.6
 scipy
 tensorflow==2.13.0rc0
-git+https://github.com/PatricioClark/pySPEC.git@adjoint-merge
+git+https://github.com/PatricioClark/spooky.git
