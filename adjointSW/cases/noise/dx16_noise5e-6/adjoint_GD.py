@@ -8,10 +8,10 @@ import jax
 jax.config.update("jax_enable_x64", True)
 import jax.random as jrd
 import optax
-# import pyspec tools and solvers
-import pySPEC as ps
-from pySPEC.solvers.swhd_1d import SWHD_1D
-from pySPEC.solvers.adjoint_swhd_1d import Adjoint_SWHD_1D
+# import spooky tools and solvers
+import spooky as ps
+from spooky.solvers.swhd_1d import SWHD_1D
+from spooky.solvers.adjoint_swhd_1d import Adjoint_SWHD_1D
 # import utility functions
 from mod import *
 

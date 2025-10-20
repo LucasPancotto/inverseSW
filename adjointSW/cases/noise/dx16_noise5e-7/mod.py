@@ -7,9 +7,9 @@ from scipy.optimize import curve_fit
 import jax.numpy as jnp
 import optax
 from types import SimpleNamespace
-import pySPEC as ps
-from pySPEC.solvers.swhd_1d import SWHD_1D
-from pySPEC.solvers.adjoint_swhd_1d import Adjoint_SWHD_1D
+import spooky as ps
+from spooky.solvers.swhd_1d import SWHD_1D
+from spooky.solvers.adjoint_swhd_1d import Adjoint_SWHD_1D
 
 
 def check_dir(directory):
