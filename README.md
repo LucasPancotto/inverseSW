@@ -14,7 +14,7 @@ To run each case, follow these steps:
 
 1. **Install dependencies**
 
-   This project depends on the [`pySPEC`](https://github.com/PatricioClark/pySPEC) library, and other python packages.
+   This project depends on the [`spooky`](https://github.com/PatricioClark/spooky.git) library, and other python packages.
 
    run:
     ```bash

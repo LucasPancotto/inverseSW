@@ -8,8 +8,8 @@ import matplotlib.pyplot as plt
 from types import SimpleNamespace
 import os
 import sys
-import pySPEC as ps
-from pySPEC.solvers.swhd_1d import SWHD_1D
+import spooky as ps
+from spooky.solvers.swhd_1d import SWHD_1D
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 # Parse JSON into an object with attributes corresponding to dict keys.

@@ -5,9 +5,9 @@ from matplotlib.ticker import ScalarFormatter
 from types import SimpleNamespace
 import os
 
-import pySPEC as ps
-from pySPEC.solvers.swhd_1d import SWHD_1D
-from pySPEC.solvers.adjoint_swhd_1d import Adjoint_SWHD_1D
+import spooky as ps
+from spooky.solvers.swhd_1d import SWHD_1D
+from spooky.solvers.adjoint_swhd_1d import Adjoint_SWHD_1D
 
 
 class Generator():
