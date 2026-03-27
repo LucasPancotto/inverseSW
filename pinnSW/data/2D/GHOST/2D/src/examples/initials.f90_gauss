@@ -1,0 +1,38 @@
+! Initial condition for the passive/active scalar.
+! The scalar can be passive (e.g., in the PHD solver) or active (as 
+! in the shallow-water solvers, where it represents the height of 
+! the column of fluid). 
+! This file contains the expression used for the initial scalar. 
+! You can use temporary real arrays R1 of size (n,jsta:jend), and 
+! temporary complex arrays C1, C2, C12 and C13 of size (n,ista:iend)
+! to do intermediate computations. 
+! The variable c0 should control the global concentration of the 
+! scalar, and variables cparam0-9 can be used to control the 
+! amplitudes of individual terms. At the end, the height in 
+! spectral space should be stored in the array th.
+
+! initials for linearized SWHD
+! note that this is the total height, so c0 = ho + nu = h
+ 
+
+
+! Gaussian perturbation to an equilibrium
+!     cparam0 : ho
+!     cparam1 : amplitude of the perturbation
+!     cparam2 : length of the perturbation (in 2.pi units)
+
+
+         DO j = jsta,jend
+            DO i = 1,n
+               R1(i,j) = cparam0+cparam1*exp(-(2*pi*(real(i,kind=GP)-1)/ real(n,kind=GP)-pi)**2/cparam2**2)
+            END DO
+         END DO
+     
+
+      CALL fftp2d_real_to_complex(planrc,R1,th,MPI_COMM_WORLD)
+
+
+
+
+
+

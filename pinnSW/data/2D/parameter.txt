@@ -1,0 +1,67 @@
+! General configuration flags
+&status
+idir = "./outs"
+odir = "./outs"
+stat = 160         ! last binary file if restarting an old run
+mult = 1         ! decreases the time step
+bench = 0        ! benchmark mode if 1
+outs = 0         ! controls the amount of output
+trans = 1        ! computes energy transfer if 1
+/
+
+! Parameters for time integration
+&parameter
+dt = 1e-4       ! time step
+step = 60000      ! total number of steps
+tstep = 250      ! number of steps between binary output
+sstep = 300000      ! number of steps between spectrum output
+cstep = 300000      ! number of steps between writing global quantities
+rand = 0         ! random phases if 1
+cort = 0      ! correlation time of the external forcing
+seed = 1000      ! seed for the random number generator
+/
+
+! Parameters for the velocity field
+&velocity
+f0 = 0.0075  ! amplitude of the mechanical forcing
+u0 = 1        ! amplitude of the initial velocity field
+kdn = 1.00       ! minimum wavenumber
+kup = 1.00       ! maximum wavenumber
+nu = 0       ! kinematic viscosity
+fparam0 = 3   ! idem for the initial velocity field
+fparam1 = 8   ! idem for the initial velocity field
+fparam2 = 1   ! idem for the initial velocity field
+vparam0 = 0
+vparam1 = 0.05
+vparam2 = 0.3927
+vparam3 = 2
+/
+
+! Parameters for the passive/active scalar (PHD, SWHD solvers)
+&scalar
+c0 =1        ! initial amplitude of the scalar
+s0 = 0.00        ! amplitude of the forcing (topography in SW)
+skdn = 5.00      ! minimum wavenumber
+skup = 5.00      ! maximum wavenumber
+kappa = 2.e-3    ! diffusivity (ignored in SW solvers)
+sparam0 = 0   ! sparam0-9 can be used to control the forcing
+sparam1 = 0.1
+
+
+
+cparam0 = 1   ! idem for the initial amplitude of the scalar
+cparam1 = 0.05
+cparam2 = 0.3927
+cparam3 = 2
+/
+
+! Parameters for shallow-water runs (SWHD solver)
+&gravity
+g = 1        ! effective gravity
+switch = 0
+/
+
+! Inject parameter for passive scalar runs (PHD solver)
+&inject
+injt = 0
+/

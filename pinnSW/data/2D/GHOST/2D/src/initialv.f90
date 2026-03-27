@@ -1,0 +1,37 @@
+! Initial condition for the velocity.
+! This file contains the expression used for the initial
+! streamfunction or velocity field (depending on the solver). 
+! You can use the temporary real array R1 of size 
+! (n,jsta:jend), and temporary complex arrays C1, C2 of size 
+! (n,ista:iend) to do intermediate computations. The variable 
+! u0 should control the global amplitude of the field, and 
+! variables vparam0-9 can be used to control the amplitudes 
+! of individual terms. At the end, the streamfunction should 
+! be stored in the array ps, or the velocity field components 
+! in the arrays vx and vy (plus vz in 2.5D solvers).
+
+! initials for linearized SWHD
+
+! Gaussian perturbation to an equilibrium
+!     vparam0 : 0
+!     vparam1 : amplitude of the perturbation
+!     vparam2 : length of the perturbation (in 2.pi units)
+
+    DO j = jsta,jend
+        DO i = 1,n
+             R1(i,j) = vparam0+vparam1*exp(-(2*pi*(real(i,kind=GP)-1)/real(n,kind=GP) - pi/vparam3 )**2/vparam2**2)
+        END DO
+    END DO
+
+
+
+    DO i = ista, iend
+        DO j=1,n
+            vy(j,i) = 0.0_GP
+        END DO
+    END DO    
+
+
+    CALL fftp2d_real_to_complex(planrc,R1,vx,MPI_COMM_WORLD)
+   ! CALL normalize(vx,u0,2,MPI_COMM_WORLD)
+       

@@ -20,15 +20,26 @@ To run each case, follow these steps:
     ```bash
     pip install -r requirements.txt
 
-2. **Generate data**
+2. **Generate 1D data**
 
-   Go to directory `data/time_marching_swhd1D_DG-scaled-hbnoise` (or `data/time_marching_swhd1D_DG-scaled-hbnoise_pinn` if running PINN case).
+   Go to directory `adjointSW/data/time_marching_swhd1D_DG-scaled-hbnoise` (or `pinnSW/data/time_marching_swhd1D_DG-scaled-hbnoise_pinn` if running PINN case).
 
    Create directory named `outs`.
 
    Run `time_marching.py`.
 
-3. **Run a case**
+3. **Generate 2D data**
+
+   Go to directory `pinnSW/data/2D`
+
+   Create directory named `outs`.
+
+   Refer to [GHOST](https://github.com/pmininni/GHOST) for details on how to download and compile GHOST (Geophysical High Order Suite for Turbulence). The necesary
+   fortran files are already included in  `src`. The text file `parameters.txt` has the necesary parameters for the current 2D case. Once the code is correctly compiled,
+   executable `bin/SWHD` must be copied to `pinnSW/data/2D` and executed (i.e. using `mpirun -np 1 ./SWHD`).
+
+
+4. **Run a case**
 
   a. **Run adjoint case**
 
@@ -43,7 +54,7 @@ To run each case, follow these steps:
 
   Run `run_pinn.py`.
 
-4. **Plots**
+5. **Plots**
 
   After running all cases, for both PINNs and Adjoint Method, go to directory `plots`.
 
