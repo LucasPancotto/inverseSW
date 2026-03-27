@@ -6,8 +6,9 @@ Each directory `cases/` contains:
 - A `no_noise/` folder, that contains several subdirectories which are cases with different sparsity of data points (in number of simulation steps `dx` between data points).
 - A `noise/` folder, that contains cases with different amplitudes of added noise to the data points.
 
-`adjointSW/cases` contains folder `udata`, which corresponds to a case where the inverse problem is solved using velocity measurements instead of height measurements.
-`pinnSW/cases` contains folder `2D`, which corresponds to a 2D case.
+Additionally:
+- `adjointSW/cases` contains folder `udata`, which corresponds to a case where the inverse problem is solved using velocity measurements instead of height measurements.
+- `pinnSW/cases` contains folder `2D`, which corresponds to a 2D case.
 ---
 
 ## Running the cases
