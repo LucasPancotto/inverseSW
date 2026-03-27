@@ -6,6 +6,8 @@ Each directory `cases/` contains:
 - A `no_noise/` folder, that contains several subdirectories which are cases with different sparsity of data points (in number of simulation steps `dx` between data points).
 - A `noise/` folder, that contains cases with different amplitudes of added noise to the data points.
 
+`adjointSW/cases` contains folder `udata`, which corresponds to a case where the inverse problem is solved using velocity measurements instead of height measurements.
+`pinnSW/cases` contains folder `2D`, which corresponds to a 2D case.
 ---
 
 ## Running the cases
@@ -34,9 +36,9 @@ To run each case, follow these steps:
 
    Create directory named `outs`.
 
-   Refer to [GHOST](https://github.com/pmininni/GHOST) for details on how to download and compile GHOST (Geophysical High Order Suite for Turbulence). The necesary
-   fortran files are already included in  `src`. The text file `parameters.txt` has the necesary parameters for the current 2D case. Once the code is correctly compiled,
-   executable `bin/SWHD` must be copied to `pinnSW/data/2D` and executed (i.e. using `mpirun -np 1 ./SWHD`).
+   Refer to [GHOST](https://github.com/pmininni/GHOST) for details on how to download and compile GHOST (Geophysical High Order Suite for Turbulence by Pablo Mininni). The necesary
+   Fortran files are already included in  `src`. The text file `parameters.txt` has the necesary parameters for the current 2D case. Once the code is correctly compiled,
+   executable `bin/SWHD` must be copied to `pinnSW/data/2D` and executed (for example using `mpirun -np 1 ./SWHD`).
 
 
 4. **Run a case**
